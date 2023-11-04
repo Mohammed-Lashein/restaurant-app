@@ -7,6 +7,9 @@ import { useState } from 'react'
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+	const toggleMobileMenu = () => {
+		setOpenMenu(false); onClick={toggleMobileMenu}
+	}
   // Desktop navbar classes
   const activeMenuClasses = styles.menuIcon + ' ' +  styles.active;
   const inactiveMenuClass = styles.menuIcon;
@@ -82,22 +85,22 @@ const Navbar = () => {
     {/* mobile only start */}
     <ul className={openMenu ? mobileActiveMenuClasses : mobileInactiveMenuClasses}>
       <li>
-					<Link href='/'>Homepage</Link>
+					<Link href='/' onClick={toggleMobileMenu}>Homepage</Link>
 				</li>
 				<li>
-					<Link href='/'>Products</Link>
+					<Link href='/' onClick={toggleMobileMenu}>Products</Link>
 				</li>
 				<li>
-					<Link href='/'>Menu</Link>
+					<Link href='/'onClick={toggleMobileMenu}>Menu</Link>
 				</li>
 				<li>
-					<Link href='/'>Events</Link>
+					<Link href='/' onClick={toggleMobileMenu}>Events</Link>
 				</li>
 				<li>
-					<Link href='/'>Blog</Link>
+					<Link href='/' onClick={toggleMobileMenu}>Blog</Link>
 				</li>
 				<li>
-					<Link href='/'>Contact</Link>
+					<Link href='/' onClick={toggleMobileMenu}>Contact</Link>
 				</li>
       </ul>
       {/* mobile only end */}
