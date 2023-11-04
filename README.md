@@ -1,3 +1,8 @@
+## About the project 
+This is my personalized version of the project . I watch the tutorial and get the general idea then dig in myself and try to explore and experiment new things . [Link to the project on youtube](https://www.youtube.com/watch?v=vIxGDq1SPZQ&t=11s&pp=ygUQbGFtYWRldiBmb29kIGFwcA%3D%3D)
+
+## Below is the README content that nextjs usually adds to any project, check it out , you many find some resources useful . 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
