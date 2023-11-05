@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 const Featured = () => {
-	const [activeIndex, setActiveIndex] = useState(1);
+	const [currentProductSlide, setCurrentProductSlide] = useState(1);
   
 	const featuredProducts = [
 		{
@@ -22,24 +22,28 @@ const Featured = () => {
 	];
 
   const handleCarouselIncrement = () => {
-    if (activeIndex === featuredProducts.length - 1) {
-      setActiveIndex(0)
-      console.log(activeIndex);
+    if (currentProductSlide === featuredProducts.length - 1) {
+      setCurrentProductSlide(0)
+      console.log(currentProductSlide);
       return;
       // The importance of the return is that if this block of code got executed, the code below it is blocked from execution . 
     }
-    setActiveIndex(activeIndex + 1);
-    console.log(activeIndex);
+    setCurrentProductSlide(currentProductSlide + 1);
+    console.log(currentProductSlide);
   }
   const handleCarouselDecrement = () => {
-    if (activeIndex === 1) {
-      setActiveIndex(featuredProducts.length - 1);
-      console.log(activeIndex);
+    if (currentProductSlide === 0) {
+      setCurrentProductSlide(featuredProducts.length - 1);
+      console.log(currentProductSlide);
       return;
     }
-    setActiveIndex((prev) => prev - 1);
-    console.log(activeIndex);
+    setCurrentProductSlide((prev) => prev - 1);
+    console.log(currentProductSlide);
   }
+
+	const handleBulletClick = (i) => {
+		setCurrentProductSlide(i);
+	} 
 
 
 	return (
@@ -64,7 +68,7 @@ const Featured = () => {
 				<div>
           <div style={{position: 'relative'}}>
             {featuredProducts.map((product,i) => (
-              <div className={styles.offersContainer} style={{transform: `translateX(-${activeIndex * 100}%)`}} key={i}>
+              <div className={styles.offersContainer} style={{transform: `translateX(-${currentProductSlide * 100}%)`}} key={i}>
               <h1 className={styles.offerText}>{product.text}</h1>
               <Image
                 src={product.img}
@@ -79,8 +83,9 @@ const Featured = () => {
 					<div className={styles.bulletsContainer}>
 						{featuredProducts.map((product, i) => (
 							<span
-								className={activeIndex === i ? styles.bulletActive : styles.bullet}
+								className={CuctSlide === i ? styles.bulletActive : styles.bullet}
 								key={i}
+								onClick={() => handleBulletClick(i)}
 							></span>
 						))}
 					</div>
