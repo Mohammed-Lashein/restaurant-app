@@ -4,89 +4,38 @@
   height: calc(100vh - 100px);
   position: relative;
 }
+
 .arrowLeft,
 .arrowRight {
   position: absolute;
   cursor: pointer;
+  z-index: 5;
 }
+
 .arrowLeft {
   top: 50%;
   left: 80px;
   /* I was supposed to use left:0; but this didn't give the desired appearance , so I hardcoded the value .  */
   transform: translate(-50%, -50%);
 }
+
 .arrowRight {
   top: 50%;
   right: -7%;
+  right: -2%;
   transform: translate(-50%, -50%);
 }
-.offersContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  align-items: center;
-  gap: 1rem;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s linear;
-}
-.offersContainer:nth-child(2) {
-  left: 100%
-}
-.offersContainer:nth-child(3) {
-  left: 200%;
-}
-.offersContainerActive {
-  display: block;
-}
-.offersContainer .offerText {
-  color: white;
-  font-weight: bold;
-  font-size: 5rem;
-  text-align: center;
-  margin: 0;
-}
-.offersContainer img {
-  object-fit: contain;
-  max-width: 97%;
-  /* The width property is important but the height is of no value since the image height is fixed and it didn't cause any problems . Problems were on small devices where the img overflowed from the container */
-  /* max-height: 97%; */
-  margin: auto;
-}
-@media screen and (max-width: 1015px) {
-  .offersContainer {
-    grid-template-columns: 1fr;
-}
-.offersContainer .offerText {
-  font-size: 4rem;
-}
-.arrowLeft,
-.arrowRight {
-  width: 100px;
-  height: 80px;
-}
-}
+
 @media screen and (max-width: 600px) {
-  .offersContainer .offerText {
-    font-size: 3rem;
-  } 
-  .arrowRight {
-    right: -15%;
-  } 
   .arrowLeft {
-    left: 30px;
+    left: 25px;
+  }
+
+  .arrowRight {
+    right: -18%;
   }
 }
 
-.carouselContainer {
-  width: 70%;
-  height: 100%;
-  margin: auto;
-  border: 3px solid khaki;
-  position: relative;
-  overflow-x: hidden;
-}
 .bulletsContainer {
   padding: 5px;
   background-color: white;
@@ -100,6 +49,7 @@
   transform: translateX(-50%);
   /* I had to make the bullets container absolutely positioned because removing the carousel elements from the normal document flow interrupted the design .  */
 }
+
 .bulletsContainer .bullet,
 .bulletsContainer .bulletActive {
   display: inline-block;
@@ -109,6 +59,7 @@
   border-radius: 50%;
   cursor: pointer;
 }
+
 .bulletsContainer .bullet {
   background-color: grey;
 }
@@ -116,15 +67,76 @@
 .bulletsContainer .bulletActive {
   background-color: var(--main-color);
 }
+
 @media screen and (max-width: 740px) {
+
   /* The max-width I specified here is because this was the visual breakpoint where a media query was needed .  */
   .bulletsContainer {
     bottom: 7%;
   }
 }
-@media screen and (min-width: 1000px) {
-  .carouselContainer {
-    padding-top: 8rem;
+
+/* - margin needs to be increased in case of min-width: 1000px so that only one item is displayed in the container
+- When screen size is less than 700px, the flex direction needs to be column */
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  /* overflow-x: hidden; */
+  /* gap: 5rem; */
+  width: 100%;
+  /* width: fit-content; */
+  height: 100%;
+}
+
+.featuredProduct {
+  display: flex;
+  gap: 1rem;
+  min-width: fit-content;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* transition: all 0.5s ease-in-out; */
+  /* margin: 0 12rem; */
+}
+
+.featuredProduct h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 1150px) {
+  .featuredProduct {
+    margin: 17rem;
+    min-width: 100%;
+    margin: 0;
   }
 }
 
+@media screen and (max-width: 700px) {
+  .featuredProduct {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .featuredProduct {
+    margin: 0;
+  }
+
+  .featuredProduct h1 {
+    font-size: 2rem;
+  }
+
+  .featuedProduct .productImage {
+    width: 100px !important;
+    height: 100px !important;
+    width: auto;
+    height: auto;
+  }
+}
+
+.sliding-transition {
+  transition: all 0.5s ease-in-out;
+}
