@@ -1,0 +1,35 @@
+.container {
+  width: 100vw;
+  min-height: calc(100vh - 100px);
+  /* Remember that the amount we decreased here is the height of the navbar  */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  background-color: #222;
+  color: white;
+}
+.container section {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.container section:first-child {
+  height: 100%;
+}
+.container section h1 {
+  padding: 0.5rem;
+  margin-bottom: 0;
+  text-align: center;
+
+}
+.container section:first-child img {
+  width: 100%;
+  height: 100%;
+}
+.container section:not(:nth-child(2)) h1 {
+  color: #b7903c;
+}
+.container section p {
+  max-width: 160px;
+}

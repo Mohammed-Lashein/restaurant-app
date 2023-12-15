@@ -1,0 +1,29 @@
+.pizzaCardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 1rem;
+}
+.pizzaName {
+  color: #d1411e;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+.pizzaPrice {
+  color: #666;
+  font-size: 1.1rem;
+}
+.pizzaName,
+.pizzaPrice {
+  font-weight: bold;
+}
+.pizzaDesc {
+  color: #777;
+  text-align: center;
+}
+.pizzaName,
+.pizzaPrice,
+.pizzaDesc {
+  margin: 0;
+}

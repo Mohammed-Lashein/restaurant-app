@@ -1,0 +1,28 @@
+.wrapper {
+  width: 100%;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+.title,
+.desc {
+  text-align: center;
+}
+.desc {padding: 0 1rem;}
+.pizzaCardsContainer {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* The above line of css deserves a comment of it's own : 
+  - I haven't used grid since some time and I forgot most of the important properties and how to use them . 
+  - I was reluctant to review the course of grid again and I wanted to just try to do things myself .
+  - After struggling I decided that I will return back to the CSS course I took back in the early days to remember the old stuff . 
+  - All of the headache the I would have gotten by chasing the media queries to change the number of columns based on the screen size was prevent by JUST one css line .
+  - Moral of the story : Never be arrogant to go back and review the basics, because basics are what makes you an efficient programmer . 
+  - Don't be arrogant and say that I am studying nextjs now and I am too senior (even though you haven't got a job yet !) to return back and re-study css . Take your time and never feel reluctant to review the basics .
+  */
+}

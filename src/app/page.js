@@ -1,5 +1,5 @@
 import Featured from '@/components/Featured'
-import Menu from '@/components/Menu'
+import PizzaList from '@/components/PizzaList'
 import Image from 'next/image'
 
 
@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main>
       <Featured/>
-      <Menu/>
+      <PizzaList/>
     </main>
   )
 }

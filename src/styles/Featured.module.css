@@ -96,8 +96,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* transition: all 0.5s ease-in-out; */
-  /* margin: 0 12rem; */
+  transition: all 0.5s ease-in-out;
 }
 
 .featuredProduct h1 {
@@ -113,14 +112,14 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 415px) {
   .featuredProduct {
     flex-direction: column;
     text-align: center;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .featuredProduct {
     margin: 0;
   }
@@ -130,10 +129,10 @@
   }
 
   .featuedProduct .productImage {
-    width: 100px !important;
+    /* width: 100px !important;
     height: 100px !important;
     width: auto;
-    height: auto;
+    height: auto; */
   }
 }
 

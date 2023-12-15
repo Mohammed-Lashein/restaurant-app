@@ -9,6 +9,9 @@
   background-color: #d1411e;
   padding: 0 50px;
   position: sticky;
+  top: 0;
+  /* I really forgot that in order for the position sticky to work, I need to specify the dimensions that the element will stick to .  */
+  z-index: 10;
 
 }
 .contact {
