@@ -18,8 +18,8 @@ const PizzaList = () => {
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio sequi ipsum, nesciunt placeat mollitia ea praesentium fugit, iste, beatae itaque adipisci deleniti quos vero? Repellat.
       </p>
       <div className={styles.pizzaCardsContainer}>
-        {pizzaArray.map((img_source) => (
-          <PizzaCard img_source={img_source}/>
+        {pizzaArray.map((img_source,i) => (
+          <PizzaCard img_source={img_source} key={i}/>
         ))}
       </div>
     </div>

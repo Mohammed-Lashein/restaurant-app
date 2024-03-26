@@ -8,7 +8,7 @@ import { useState } from 'react'
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 	const toggleMobileMenu = () => {
-		setOpenMenu(false); onClick={toggleMobileMenu}
+		setOpenMenu(false);
 	}
   // Desktop navbar classes
   const activeMenuClasses = styles.menuIcon + ' ' +  styles.active;
@@ -65,7 +65,8 @@ const Navbar = () => {
       
 			<div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
 				<div className={styles.cartIconContainer}>
-					<Link href='/cart'>
+					<Link href='/'>
+						{/* Since the cart page is still under construction, I don't want the user when he clicks on it to go there just to find the footer along with a div containing cart text */}
 						<Image
 							src='/img/cart.png'
 							alt='cart icon'
