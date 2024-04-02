@@ -14,6 +14,7 @@
   z-index: 10;
 
 }
+
 .contact {
   display: flex;
   gap: 1rem;
@@ -94,25 +95,32 @@
   left: 0;
   transition: all 0.3s ease;
 }
+
 .menuIcon .bar:first-child {
   top: 0;
 }
+
 .menuIcon .bar:nth-child(2) {
   top: 6px;
 }
+
 .menuIcon .bar:last-child {
   top: 12px;
 }
+
 .menuIcon.active .bar:nth-child(2) {
   display: none;
 }
+
 .menuIcon.active .bar:first-child,
 .menuIcon.active .bar:last-child {
   top: 6px;
 }
+
 .menuIcon.active .bar:first-child {
   transform: rotate(45deg);
 }
+
 .menuIcon.active .bar:last-child {
   transform: rotate(-45deg);
 }
@@ -127,12 +135,15 @@
   .container {
     justify-content: space-between;
   }
+
   .navbarMenu {
     display: none;
   }
+
   .menuIcon {
     display: block;
   }
+
   .navbarMenuMobile.mobileMenuActive {
     display: flex;
     flex-direction: column;
@@ -149,5 +160,5 @@
     font-size: 2rem;
     z-index: 5;
   }
-  
+
 }

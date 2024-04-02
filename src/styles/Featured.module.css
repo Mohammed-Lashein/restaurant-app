@@ -32,7 +32,7 @@
   }
 
   .arrowRight {
-    right: -18%;
+    right: -12%;
   }
 }
 
@@ -72,7 +72,7 @@
 
   /* The max-width I specified here is because this was the visual breakpoint where a media query was needed .  */
   .bulletsContainer {
-    bottom: 7%;
+    bottom: 3%;
   }
 }
 
@@ -81,8 +81,7 @@
 .carouselContainer {
   display: flex;
   align-items: center;
-  overflow-x: scroll;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   /* gap: 5rem; */
   width: 100%;
   /* width: fit-content; */
@@ -128,12 +127,6 @@
     font-size: 2rem;
   }
 
-  .featuedProduct .productImage {
-    /* width: 100px !important;
-    height: 100px !important;
-    width: auto;
-    height: auto; */
-  }
 }
 
 .sliding-transition {
